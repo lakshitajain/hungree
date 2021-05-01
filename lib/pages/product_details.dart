@@ -74,7 +74,48 @@ class _ProductDetailsState extends State<ProductDetails> {
                       ]),
                     ),
                   ),
+                )),
+            // ============ The First Buttons =================
+            Row(
+              children: <Widget>[
+                // ==============  the QTY Button ===========
+                Expanded(
+                    child: MaterialButton(
+                  onPressed: () {},
+                  color: Colors.white,
+                  textColor: Colors.grey,
+                  elevation: 0.3,
+                  child: Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: new Text("Quantity"),
+                      ),
+                      Expanded(child: new Icon(Icons.arrow_drop_down))
+                    ],
+                  ),
                 ))
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                // ==============  the Buy Now Button ===========
+                Expanded(
+                    child: MaterialButton(
+                        onPressed: () {},
+                        color: Colors.green,
+                        textColor: Colors.white,
+                        elevation: 0.3,
+                        child: new Text("Buy Now"))),
+                new IconButton(
+                    icon: Icon(Icons.add_shopping_cart),
+                    color: Colors.green,
+                    onPressed: () {}),
+                new IconButton(
+                    icon: Icon(Icons.favorite_border),
+                    color: Colors.green,
+                    onPressed: () {})
+              ],
+            )
           ],
         ));
   }
