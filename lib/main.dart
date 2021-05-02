@@ -14,7 +14,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
-    Widget image_carousel = new Container(
+    Widget imageCarousel = new Container(
       height: 200.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
@@ -137,7 +137,7 @@ class _HomePageState extends State<HomePage> {
       body: new ListView(
         children: <Widget>[
           // carousel
-          image_carousel,
+          imageCarousel,
           //padding
           new Padding(
               padding: const EdgeInsets.all(8.0),
