@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:carousel_pro/carousel_pro.dart';
+//import 'package:carousel_pro/carousel_pro.dart';
 import 'package:flutter_app1/components/horizontal_listview.dart';
 import 'components/products.dart';
+import 'package:flutter_app1/pages/cart.dart';
 
 void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
@@ -14,7 +15,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
-    Widget imageCarousel = new Container(
+    /* Widget imageCarousel = new Container(
       height: 200.0,
       child: new Carousel(
         boxFit: BoxFit.cover,
@@ -32,7 +33,7 @@ class _HomePageState extends State<HomePage> {
         animationCurve: Curves.elasticIn,
         animationDuration: Duration(milliseconds: 800),
       ),
-    );
+    );*/
     return Scaffold(
       appBar: new AppBar(
         backgroundColor: Colors.green,
@@ -47,7 +48,10 @@ class _HomePageState extends State<HomePage> {
           ),
           new IconButton(
               icon: Icon(Icons.shopping_cart, color: Colors.white),
-              onPressed: () {}),
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new Cart()));
+              }),
           new IconButton(
               icon: Icon(Icons.article_sharp, color: Colors.white),
               onPressed: () {}),
@@ -103,7 +107,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new Cart()));
+              },
               child: ListTile(
                 title: Text('Customer Service'),
                 leading: Icon(Icons.phone, color: Colors.green),
@@ -137,7 +144,7 @@ class _HomePageState extends State<HomePage> {
       body: new ListView(
         children: <Widget>[
           // carousel
-          imageCarousel,
+          // image_carousel,
           //padding
           new Padding(
               padding: const EdgeInsets.all(8.0),
