@@ -56,6 +56,7 @@ class Singleprod extends StatelessWidget {
   final prodPicture;
   final prodOldprice;
   final prodPrice;
+
   Singleprod(
       {this.prodName, this.prodPicture, this.prodOldprice, this.prodPrice});
   @override
